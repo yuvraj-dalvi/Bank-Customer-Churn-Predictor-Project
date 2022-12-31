@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <title>Customer Churn Prediction</title>
+    
+</head>
+
+<body>
+
+
+    
+    
+        
+        <form action="{{ url_for('predict')}}" method="post">
+	    <h1>Bank Customer Churn Predictor</h1>
+	    <h3>Fill the form to find out if a customer will churn out or not</h3>
+	    
+    
+
+        
+    	<div>
+			      <div>
+			        <p>Credit Score:</p>
+
+				        <input name="CreditScore"  required="required" name="CreditScore" type="number" placeholder="Enter Credit Score">
+                		</div>
+       </div> 
+
+
+
+            <div>
+            <p>Age of the Customer:</p>
+            
+				<input name="Age" required="required" placeholder="Enter Age">
+                
+			</div>
+
+
+
+			<div>
+			<p>Tenure:</p>	
+			
+                <input name="Tenure" required="required" placeholder="Enter Tenure">
+                
+			</div>	
+
+
+
+			<div>
+			<p>Enter the Account Balance:</p>
+			
+				<input name="Balance" required="required" placeholder="Enter Account Balance">
+                
+			</div>
+
+
+
+
+			<div>
+			<p>Number of Products Used by the Customer:</p> 
+			
+				<input name="NumOfProducts" required="required" placeholder="Enter Number of Products">
+               
+			</div>
+
+
+
+
+			<div>
+			<p>Does the Customer have a Credit Card? (1=Yes, 0=No): </p>
+			
+				<input name="HasCrCard" required="required" placeholder="Credit Card Presence">
+               
+			</div>	
+
+
+
+	</div>
+
+
+
+	<div>	
+
+			<div>
+			<p>Is the Customer an Active Member (1=Yes, 0=No):</p>
+			
+				<input name="IsActiveMember" required="required"placeholder="Active Member or not">
+                
+			</div>	
+
+
+
+			<div>
+			<p>Enter the Estimated Salary of the Customer:</p>	
+			
+				<input name="EstimatedSalary" required="required" placeholder="Enter Salary">
+                
+			</div>
+
+
+
+			<div>
+			<p>Enter The Location of the Customer: </p>
+			
+                <select name="Geography_Germany" required="required">
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="France">France</option>
+            </select>
+           
+			</div>
+
+
+
+			<div>
+			<p>Enter the Gender of Customer: </p>	
+			
+                <select name="Gender_Male" id="resea" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+               
+			</div>
+		
+			
+	</div>
+	</div><br><br>
+<button  type="submit ">Click to Predict whether the customer will leave the bank or not</button>
+	
+</form>	
+    
+   
+   
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+<div>
+    	<div> Thanking you for using our service. Visit again. </div>
+
+
+   
+
+
+    <style>
+
+	h1{text-align: center;}
+
+    </style>
+ </body>
+
+</html>
